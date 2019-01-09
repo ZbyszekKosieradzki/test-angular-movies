@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { MoviesProviderService } from 'src/app/movie/services/movies-provider.service';
 import { Movie } from 'src/app/movie/interfaces/movie';
@@ -8,26 +8,21 @@ import { Movie } from 'src/app/movie/interfaces/movie';
   templateUrl: './movie-profile.component.html',
   styleUrls: ['./movie-profile.component.css']
 })
-export class MovieProfileComponent implements OnInit {
+export class MovieProfileComponent {
 
-  movie: Movie = null;
+
+@Input() movie: Movie = null;
 
   constructor(
-    private route: ActivatedRoute,
-    private moviesProvider: MoviesProviderService
+    //private route: ActivatedRoute,
+    //private moviesProvider: MoviesProviderService
 
   ) { }
 
-  async ngOnInit() {
-
-    const id = this.route.snapshot.paramMap.get('id');
-    console.log({id});
-    const movie = await this.moviesProvider.fetchMovieById(id);
-    console.log({movie});
-
-    this.movie = movie;
-
+  // tslint:disable-next-line:use-life-cycle-interface
+  ngOnInit(): void {
 
   }
+
 
 }
