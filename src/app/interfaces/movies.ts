@@ -1,10 +1,10 @@
 import { Movie } from './movie';
 
 
-export interface Movies {
-    [prop: number]: Movie;
-    //dynamiczne klucze
+// export interface Movies {
+//     [prop: number]: Movie;
+//     //dynamiczne klucze
 
-}
+// }
 //zamiennie
-//export type Movies = Array<Movie>;
+export type Movies = Array<Movie>;

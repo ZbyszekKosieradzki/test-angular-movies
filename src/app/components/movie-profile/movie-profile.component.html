@@ -1,3 +1,11 @@
-<p>
-  movie-profile works!
-</p>
+<div class="media" *ngIf="movie">
+    <img
+        class="mr-3"
+        [src]="movie.imageUrl"
+        alt="{{movie.title}}"
+    >
+    <div class="media-body">
+        <h5 class="mt-0">{{ movie.title}}</h5>
+        {{movie.description}}
+    </div>
+</div>
