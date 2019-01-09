@@ -15,6 +15,10 @@ const routes: Routes = [
     loadChildren: './movie/movie.module#MovieModule'
   },
   {
+    path: 'search',
+    loadChildren: './search/search.module#SearchModule'
+  },
+  {
     path: 'con', redirectTo: 'contact',
     //pathMatch: 'prefix'
   }

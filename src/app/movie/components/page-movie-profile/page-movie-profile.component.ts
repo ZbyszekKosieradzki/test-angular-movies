@@ -26,8 +26,6 @@ movie: Movie = null;
     console.log({movie});
 
     this.movie = movie;
-
-
   }
 
 }
