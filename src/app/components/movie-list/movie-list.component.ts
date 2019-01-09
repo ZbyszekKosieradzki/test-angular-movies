@@ -8,12 +8,17 @@ import { MoviesProviderService } from 'src/app/services/movies-provider.service'
 })
 export class MovieListComponent implements OnInit {
 
+public movies: Array<Object> = null;
+
   constructor(
-    private movies: MoviesProviderService
+    private moviesProvider: MoviesProviderService
   ) { }
 
   ngOnInit() {
-    this.movies.fetchMovies();
+    this.moviesProvider.fetchMovies()
+    .then((movies)=>{
+      this.movies = movies;
+    })
   }
 
 }

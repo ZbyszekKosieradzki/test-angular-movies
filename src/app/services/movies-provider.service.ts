@@ -17,10 +17,7 @@ export class MoviesProviderService {
   }
 
   fetchMovies() {
-    this.http.get(environment.moviesUrl).toPromise()
-      .then((response) => {
-        console.log(response);
-      });
+    return this.http.get(environment.moviesUrl).toPromise();
 
   }
 }

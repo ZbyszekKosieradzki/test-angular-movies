@@ -8,13 +8,15 @@ import { MovieListItemComponent } from './components/movie-list-item/movie-list-
 import { MovieProfileComponent } from './components/movie-profile/movie-profile.component';
 import { MoviesProviderService } from './services/movies-provider.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MovieListComponent,
     MovieListItemComponent,
-    MovieProfileComponent
+    MovieProfileComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
