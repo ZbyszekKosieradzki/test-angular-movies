@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  moviesUrl:'test-angular-movies/assets/movies.json'
 };
