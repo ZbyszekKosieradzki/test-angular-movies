@@ -1,14 +1,17 @@
 [{
+  "id":"1",
   "title":"Rocky",
   "description": "Historia Rocky'ego Balboa, boksera-amatora, któremu nadarza się okazja stoczenia walki o tytuł mistrza świata wagi ciężkiej. ",
     "imageUrl": "https://ssl-gfx.filmweb.pl/po/91/90/9190/7530897.6.jpg"
 },
 {
+  "id":"2",
   "title":"Rambo",
   "description": "Historia Rocky'ego Balboa, boksera-amatora, któremu nadarza się okazja stoczenia walki o tytuł mistrza świata wagi ciężkiej. ",
     "imageUrl": "https://ssl-gfx.filmweb.pl/po/90/63/9063/7175947.6.jpg"
 },
 {
+  "id":"3",
   "title":"Terminator",
   "description": "Terminator T-800 ma za zadanie uchronić od śmierci Johna Connora, który w przyszłości poprowadzi ludzi do walki przeciwko maszynom.",
     "imageUrl": "https://ssl-gfx.filmweb.pl/po/09/92/992/7517879.6.jpg"
