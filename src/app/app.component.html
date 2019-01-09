@@ -1,32 +1,13 @@
 <!-- The content below is only a placeholder and can be replaced. -->
 <div style="text-align:left">
     <h1>Angular movies</h1>
-    <nav>
-        <ul class="nav">
-            <li class="nav">
-                <a
-                    class="btn btn-secondary"
-                    routerLink="home"
-                    routerLinkActive="btn-success"
-                >
-                    Home
-                </a>
-            </li>
-            <li>
-                <a
-                class="btn btn-secondary"
-                routerLink="contact"
-                routerLinkActive="btn-success"
-                >
-                    Contact
-                </a>
-            </li>
-        </ul>
-    </nav>
-
+    <app-menu></app-menu>
 </div>
 
 <!--<a routerLink="con">con</a>-->
+
+<router-outlet></router-outlet>
+
 <br>
 <br>
 <input
@@ -34,4 +15,3 @@
     required
     placeholder="aaa"
 >
-<router-outlet></router-outlet>

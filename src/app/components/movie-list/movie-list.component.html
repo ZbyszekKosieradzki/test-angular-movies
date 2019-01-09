@@ -1,11 +1,8 @@
-<div
-    class="card d-inline-block"
-    style="width: 300px;"
-*ngFor="let movie of movies" >
-    <img class="card-img-top" [src]="movie.imageUrl" alt="{{ movie.title}}">
-    <div class="card-body">
-        <h5 class="card-title">{{ movie.title}}</h5>
-        <p class="card-text">{{movie.description}}</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-</div>
+<app-movie-list-item
+    class="d-inline-block align-top"
+    style="width: 200px;"
+    *ngFor="let movie of movies"
+    [movie]="movie"
+>
+
+</app-movie-list-item>

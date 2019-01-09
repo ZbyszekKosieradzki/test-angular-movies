@@ -1,3 +1,8 @@
-<p>
-  movie-list-item works!
-</p>
+<div class="card">
+<img class="card-img-top" [src]="movie.imageUrl" alt="{{ movie.title}}">
+    <div class="card-body">
+        <h5 class="card-title">{{ movie.title}}</h5>
+        <p class="card-text">{{movie.description}}</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>

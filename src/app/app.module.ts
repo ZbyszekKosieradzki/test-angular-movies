@@ -9,6 +9,7 @@ import { MovieProfileComponent } from './components/movie-profile/movie-profile.
 import { MoviesProviderService } from './services/movies-provider.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ContactComponent } from './components/contact/contact.component';
+import { MenuComponent } from './components/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ContactComponent } from './components/contact/contact.component';
     MovieListComponent,
     MovieListItemComponent,
     MovieProfileComponent,
-    ContactComponent
+    ContactComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
