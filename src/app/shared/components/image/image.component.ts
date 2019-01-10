@@ -31,6 +31,9 @@ export class ImageComponent implements OnInit {
   }
 
   updateSource() {
+
+    //polyfil dla ie IntersectionObserver
+
     //pobieramy referencje do obrazka
     const $image = this.$el.nativeElement.querySelector('img');
     //tworzymy instancje sluchacza
