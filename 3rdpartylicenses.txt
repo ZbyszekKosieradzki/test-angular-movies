@@ -242,6 +242,9 @@ MIT
 @angular/platform-browser
 MIT
 
+@angular/forms
+MIT
+
 tslib
 Apache-2.0
 Apache License
