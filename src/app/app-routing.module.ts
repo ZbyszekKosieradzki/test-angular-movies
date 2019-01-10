@@ -19,6 +19,10 @@ const routes: Routes = [
     loadChildren: './search/search.module#SearchModule'
   },
   {
+    path: 'user',
+    loadChildren: './user/user.module#UserModule'
+  },
+  {
     path: 'con', redirectTo: 'contact',
     //pathMatch: 'prefix'
   }
