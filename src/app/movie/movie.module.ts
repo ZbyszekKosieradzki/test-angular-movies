@@ -23,7 +23,7 @@ import { SharedModule } from '../shared/shared.module';
     MovieRoutingModule,
     SharedModule
   ],
-  exports:[
+  exports: [
     MovieListComponent
   ],
   providers: [
