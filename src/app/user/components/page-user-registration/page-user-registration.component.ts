@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserModel } from 'src/app/models/user-model';
 
 @Component({
   selector: 'app-page-user-registration',
@@ -6,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./page-user-registration.component.css']
 })
 export class PageUserRegistrationComponent implements OnInit {
+
+  userModel = new UserModel(
+    'Zbyszek',
+
+    'password',
+    'aaa@aa.pl',
+    'm'
+    );
 
   constructor() { }
 

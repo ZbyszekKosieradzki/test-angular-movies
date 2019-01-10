@@ -1,3 +1,72 @@
-<p>
-  page-user-registration works!
-</p>
+<div class="row">
+    <div class="col-md-6">
+
+        <pre> {{userRegistrationForm.value | json}}</pre>
+        <form #userRegistrationForm="ngForm">
+            <div class="form-group">
+                <label>User name</label>
+                <input
+                    #username="ngModel"
+                    [(ngModel)]="userModel.username"
+                    name="username"
+                    type="text"
+                    class="form-control"
+                    [class.is-invalid]="username.invalid && username.touched"
+                    required
+                >
+                <small
+                    class="text-danger"
+                    *ngIf="username.invalid && username.touched"
+                >
+                    Name field is required
+                </small>
+
+            </div>
+
+            <div class="form-group">
+                <label>E-mail</label>
+                <input
+                    #email
+                    [(ngModel)]="userModel.email"
+                    name="email"
+                    type="email"
+                    class="form-control"
+                >
+            </div>
+            {{email.value}}
+            <div class="form-group">
+                <label>Password</label>
+                <input
+                    #password
+                    [(ngModel)]="userModel.password"
+                    name="password"
+                    type="text"
+                    class="form-control"
+                >
+            </div>
+            {{password.value}}
+            <div class="form-group">
+                <label>Sex</label>
+                <select
+                    class="form-control"
+                    name="sex"
+                    #sex
+                    [(ngModel)]="userModel.sex"
+                >
+                    <option value>select</option>
+                    <option value="m">Male</option>
+                    <option value="f">Female</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <button
+                    class="btn btn-success form-control"
+                    type="submit"
+                >
+                    Send
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
