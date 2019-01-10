@@ -5,6 +5,7 @@ import { SearchRoutingModule } from './search-routing.module';
 import { PageSearchResultsComponent } from './components/page-search-results/page-search-results.component';
 import { MovieModule } from '../movie/movie.module';
 
+
 @NgModule({
   declarations: [PageSearchResultsComponent],
   imports: [
