@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { ContactComponent } from './components/contact/contact.component';
 import { HomeComponent } from './components/home/home.component';
+import { AuthGuard } from './guards/auth.guard';
 const routes: Routes = [
   {
     path: '', component: HomeComponent
@@ -12,7 +13,8 @@ const routes: Routes = [
   },
   {
     path: 'movies',
-    loadChildren: './movie/movie.module#MovieModule'
+    loadChildren: './movie/movie.module#MovieModule',
+    canActivate: [AuthGuard]
   },
   {
     path: 'search',

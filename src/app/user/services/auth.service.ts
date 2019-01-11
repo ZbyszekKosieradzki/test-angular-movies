@@ -31,4 +31,8 @@ export class AuthService {
   register(userModel: UserModel) {
 
   }
+
+  isUserLogged() {
+    return this.localStorageService.read('user-logged');
+  }
 }

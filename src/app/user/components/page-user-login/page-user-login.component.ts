@@ -4,7 +4,6 @@ import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms'
 import { forbiddenEmail } from '../../../validators/forbiddenEmail.validator';
 import { AuthService } from '../../services/auth.service';
 import { UserCredentials } from '../../interfaces/user-credentials.interface';
-import { stat } from 'fs';
 import { ActivatedRoute, Route, Router } from '@angular/router';
 
 @Component({

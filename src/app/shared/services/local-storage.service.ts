@@ -14,7 +14,7 @@ export class LocalStorageService {
 
   }
 
-  read(key: string) {
+  read(key: string): any {
     let result = localStorage.getItem(key);
 
     if (typeof result === 'string') {
