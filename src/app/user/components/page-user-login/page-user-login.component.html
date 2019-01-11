@@ -1,3 +1,51 @@
-<p>
-  page-user-login works!
-</p>
+<form [formGroup]="loginFormGroup">
+    <div class="form-group">
+        <label>
+            Email
+            <sup class="text-danger">*</sup>
+        </label>
+        <input
+            type="text"
+            class="form-control"
+            formControlName="email"
+            [class.is-invalid]="validateFiled('email')"
+        >
+        <pre>{{email.errors | json}}</pre>
+        <app-field-errors
+        [formGroupRef]="loginFormGroup"
+        fieldName="email"
+        *ngIf="validateFiled('email')"
+        ></app-field-errors>
+    </div>
+
+    <div class="form-group">
+        <label>
+            Password
+            <sup class="text-danger">*</sup>
+        </label>
+        <input
+            type="text"
+            class="form-control"
+            formControlName="password"
+        >
+
+        <pre>{{email.password | json}}</pre>
+
+        <app-field-errors
+        [formGroupRef]="loginFormGroup"
+        fieldName="password"
+        *ngIf="validateFiled('password')"
+        ></app-field-errors>
+    </div>
+
+    <div class="form-group">
+
+        <button
+            class="btn btn-success form-control"
+            type="submit"
+        >
+            Login
+        </button>
+    </div>
+
+</form>
