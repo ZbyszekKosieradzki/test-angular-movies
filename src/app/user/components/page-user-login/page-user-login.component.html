@@ -1,9 +1,19 @@
+<p
+    class="alert alert-success"
+    *ngIf="loginFormSubmited"
+>
+    form was sent.
+</p>
+
 <form
     [formGroup]="loginFormGroup"
     (ngSubmit)="onSubmit()"
+    *ngIf="!loginFormSubmited"
 >
 
     <pre>{{loginFormGroup.valid}}</pre>
+
+    <pre>{{email.errors}}</pre>
     <div class="form-group">
         <label>
             Email
