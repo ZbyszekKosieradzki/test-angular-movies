@@ -23,6 +23,8 @@ export class AuthGuard implements CanActivate {
 
     const status = this.auth.isUserLogged();
 
+    console.log(typeof status, status);
+
     return status;
   }
 }

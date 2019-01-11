@@ -22,7 +22,7 @@ export class AuthService {
     const status = this.usersStore.check(userCredentials);
 
     if (status) {
-      this.localStorageService.create('uses-logged', true);
+      this.localStorageService.create('user-logged', true);
     }
     return status;
 
@@ -32,7 +32,11 @@ export class AuthService {
 
   }
 
-  isUserLogged() {
+  isUserLogged(): boolean {
     return this.localStorageService.read('user-logged');
+  }
+
+  destroyUserSession() {
+    return this.localStorageService.delete('user-logged');
   }
 }
