@@ -9,15 +9,13 @@ import { FieldErrorsComponent } from './components/field-errors/field-errors.com
 
 
 @NgModule({
-  declarations: [SearchFormComponent, ImageComponent, FieldErrorsComponent],
+  declarations: [ ImageComponent, FieldErrorsComponent],
   imports: [
     CommonModule,
-    FormsModule
-    ,
+    FormsModule,
   ReactiveFormsModule
   ],
   exports: [
-    SearchFormComponent,
     ImageComponent,
     FieldErrorsComponent
   ]

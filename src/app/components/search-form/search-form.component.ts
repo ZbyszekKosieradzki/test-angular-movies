@@ -7,7 +7,7 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./search-form.component.css']
 })
 export class SearchFormComponent implements OnInit {
-  [x: string]: any;
+
 
   query = null;
 
