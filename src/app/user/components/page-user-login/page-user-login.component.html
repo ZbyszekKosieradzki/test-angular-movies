@@ -1,8 +1,16 @@
+<!--
 <p
     class="alert alert-success"
     *ngIf="loginFormSubmited"
 >
     form was sent.
+</p>
+-->
+<p
+    class="alert alert-danger"
+    *ngIf="authError"
+>
+    {{authError}}
 </p>
 
 <form

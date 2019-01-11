@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 
 import { forbiddenEmail } from '../../../validators/forbiddenEmail.validator';
+import { AuthService } from '../../services/auth.service';
+import { UserCredentials } from '../../interfaces/user-credentials.interface';
+import { stat } from 'fs';
+import { ActivatedRoute, Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-page-user-login',
@@ -9,8 +13,9 @@ import { forbiddenEmail } from '../../../validators/forbiddenEmail.validator';
   styleUrls: ['./page-user-login.component.css']
 })
 export class PageUserLoginComponent implements OnInit {
+  router: any;
 
-  loginFormSubmited = false;
+  //loginFormSubmited = false;
 
   get email() {
     return this.loginFormGroup.get('email');
@@ -47,8 +52,12 @@ export class PageUserLoginComponent implements OnInit {
   }
   );
 
+  authError = null;
+
   constructor(
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private auth: AuthService,
+    private route: Router,
   ) { }
 
   ngOnInit() {
@@ -61,8 +70,8 @@ export class PageUserLoginComponent implements OnInit {
 
         */
       this.loginFormGroup.setValue({
-        email: 'aaaf@aaa.pl',
-        password: '12345'
+        email: 'aaa@aaa.pl',
+        password: '12345678'
       });
     }, 1000);
   }
@@ -77,9 +86,20 @@ export class PageUserLoginComponent implements OnInit {
   }
 
   onSubmit() {
-    this.loginFormSubmited = true;
+    //this.loginFormSubmited = true;
 
-    const data = this.loginFormGroup.getRawValue();
+    const data: UserCredentials = this.loginFormGroup.getRawValue();
+
+    //
     console.log(data);
+
+    const status = this.auth.authenticate(data);
+    console.log(status);
+
+    if (status) {
+      this.route.navigate(['/movies/']);
+    } else {
+      this.authError = 'login fail. unauthorized';
+    }
   }
 }
