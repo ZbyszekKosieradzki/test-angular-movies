@@ -31,4 +31,9 @@ export class PageUserLoginComponent implements OnInit {
 
     return field.errors && field.touched;
   }
+
+  onSubmit(){
+    const data = this.loginFormGroup.getRawValue();
+    console.log(data);
+  }
 }
