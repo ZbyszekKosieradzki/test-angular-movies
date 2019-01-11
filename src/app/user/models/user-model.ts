@@ -1,4 +1,6 @@
-export class UserModel {
+import { UserProfile } from '../interfaces/user-profile.interface';
+
+export class UserModel implements UserProfile {
 
   constructor(
     public username: string,

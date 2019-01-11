@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { UserCredentials } from '../interfaces/user-credentials.interface';
 import { UsersStoreService } from '../stores/users-store.service';
+import { UserModel } from '../models/user-model';
+
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +18,7 @@ export class AuthService {
     return this.usersStore.check(userCredentials);
   }
 
-  register(userModel: UserModel){
+  register(userModel: UserModel) {
 
   }
 }

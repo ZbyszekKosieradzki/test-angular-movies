@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { UserModel } from 'src/app/models/user-model';
+
 import { HttpClient } from '@angular/common/http';
+import { UserModel } from '../../models/user-model';
 
 
 @Component({

@@ -15,7 +15,7 @@ export class UsersStoreService {
     return this.users.find((user) => {
 
       return user.email === usersCredentials.email
-        && user.password === usersCredentials.password
+        && user.password === usersCredentials.password;
     }) !== undefined;
   }
 }
